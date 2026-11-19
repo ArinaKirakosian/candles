@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свет внутри | Мои заказы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Свет <span>внутри</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="orders.html" class="active">Мои заказы</a>
+            <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-wrapper">
+            <h2 class="section-title">История ваших заказов</h2>
+            
+            <div id="orders-list">
+                <!-- Сюда JS будет вставлять заказы -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мастерская «Свет внутри». Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

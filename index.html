@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свет внутри | Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Свет <span>внутри</span></div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="orders.html">Мои заказы</a>
+            <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Блок с историей -->
+        <div class="hero-story">
+            <h1>Зажги свой внутренний свет</h1>
+            <p>Добро пожаловать в мастерскую «Свет внутри».</p>
+            <p>Мы верим, что свеча — это не просто источник света. Это пауза в конце дня, момент тишины, когда вы остаетесь наедине с собой. Мы создаем наши свечи вручную из 100% натурального соевого воска, добавляя в них ароматы, которые помогают замедлиться и почувствовать тепло.</p>
+            <p>Каждая наша свеча хранит тепло рук мастера и энергию уюта. Позвольте себе немного магии.</p>
+        </div>
+        
+        <img src="images/hero.jpg" alt="Уютная атмосфера" class="hero-image">
+
+        <!-- ZERO-БЛОК: Подбор аромата по настроению -->
+        <section class="zero-block">
+            <div class="zero-content">
+                <h2>Подберите аромат по настроению</h2>
+                <p style="color: #5a4537; margin-bottom: 30px; font-size: 18px;">Какое у вас сейчас настроение?</p>
+                
+                <div class="mood-buttons">
+                    <button onclick="selectMood('relax')" class="mood-btn"> Хочу расслабиться</button>
+                    <button onclick="selectMood('energy')" class="mood-btn"> Нужен заряд энергии</button>
+                    <button onclick="selectMood('cozy')" class="mood-btn"> Ищу уют</button>
+                </div>
+
+                <!-- Результат (появится после клика) -->
+                <div id="mood-result" class="mood-result" style="display: none;">
+                    <img id="mood-img" src="" alt="Свеча" style="width: 150px; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 id="mood-title">Название свечи</h3>
+                    <p id="mood-desc">Описание</p>
+                    <button id="mood-buy-btn" onclick="addToCartFromMood()">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мастерская «Свет внутри». Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

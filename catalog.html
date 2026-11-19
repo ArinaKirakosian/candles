@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свет внутри | Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Свет <span>внутри</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="orders.html">Мои заказы</a>
+            <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Наши свечи</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="images/candle1.jpg" alt="Свеча Кокос">
+                <h3>Свеча "Кокос"</h3>
+                <p class="price">750 руб.</p>
+                <button onclick="addToCart('Свеча Кокос', 750)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/candle2.jpg" alt="Свеча Апельсин">
+                <h3>Свеча "Апельсин"</h3>
+                <p class="price">800 руб.</p>
+                <button onclick="addToCart('Свеча Апельсин', 800)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/candle3.jpg" alt="Свеча Миндаль">
+                <h3>Свеча "Миндаль"</h3>
+                <p class="price">780 руб.</p>
+                <button onclick="addToCart('Свеча Миндаль', 780)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/candle4.jpg" alt="Свеча Хвоя">
+                <h3>Свеча "Хвоя"</h3>
+                <p class="price">700 руб.</p>
+                <button onclick="addToCart('Свеча Хвоя', 700)">В корзину</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мастерская «Свет внутри». Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

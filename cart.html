@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свет внутри | Корзина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Свет <span>внутри</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="orders.html">Мои заказы</a>
+            <a href="cart.html" class="active">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-wrapper">
+            <h2 class="section-title">Ваша корзина</h2>
+            
+            <div id="cart-items">
+                <!-- JS вставит сюда товары -->
+            </div>
+            
+            <div id="cart-summary" class="cart-summary" style="display: none;">
+                <div class="cart-total">Итого: <span id="total-price">0</span> руб.</div>
+                <button id="checkout-btn" onclick="showCheckoutForm()">Оформить заказ</button>
+            </div>
+
+            <div id="checkout-form" style="display: none; margin-top: 40px; border-top: 2px solid #eee; padding-top: 30px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 28px; color: #a67c52;">Данные для доставки</h3>
+                
+                <form onsubmit="submitOrder(event)">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <input type="text" name="address" placeholder="Адрес доставки" required>
+                    <input type="text" name="card" placeholder="Номер карты (0000 0000 0000 0000)" maxlength="19" required>
+                    <button type="submit" style="width: 100%;">Оплатить и заказать</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мастерская «Свет внутри». Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
